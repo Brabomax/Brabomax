@@ -1,0 +1,203 @@
+from iqoptionapi.stable_api import IQ_Option
+import time
+import requests
+from datetime import datetime, timedelta
+
+# =========================
+# CONFIG
+# =========================
+EMAIL = "btdoistt@gmail.com"
+SENHA = "Lorena09"
+
+TELEGRAM_TOKE"
+TELEGRAM_CHAT_ID = "SEU_CHAT_ID"
+
+PARES = ["EURUSD-OTC", "GBPUSD-OTC", "GBPJPY-OTC", "AUDUSD-OTC"]
+TIMEFRAME = 60  # M1
+
+# =========================
+# TELEGRAM
+# =========================
+def enviar_telegram(msg):
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+    data = {"chat_id": TELEGRAM_CHAT_ID, "text": msg}
+    try:
+        requests.post(url, data=data, timeout=5)
+    except:
+        pass
+
+# =========================
+# CONECTAR IQ
+# =========================
+def conectar():
+    global iq
+    print("Conectando...")
+    iq = IQ_Option(EMAIL, SENHA)
+    iq.connect()
+    time.sleep(2)
+
+    if iq.check_connect():
+        iq.change_balance("PRACTICE")  # ou REAL
+        print("Conectado com sucesso")
+        return True
+    else:
+        print("Falha ao conectar")
+        return False
+
+# =========================
+# EMA CORRETA
+# =========================
+def ema(valores, periodo):
+    if len(valores) < periodo:
+        return None
+
+    k = 2 / (periodo + 1)
+    ema_atual = valores[0]
+
+    for v in valores[1:]:
+        ema_atual = v * k + ema_atual * (1 - k)
+
+    return ema_atual
+
+# =========================
+# ESTRATÉGIA EMA 9
+# =========================
+def estrategia_ema9(candles):
+
+    if len(candles) < 20:
+        return None
+
+    closes = [c["close"] for c in candles[-20:]]
+
+    ema_atual = ema(closes, 9)
+    ema_anterior = ema(closes[:-1], 9)
+
+    if ema_atual is None or ema_anterior is None:
+        return None
+
+    ultima = candles[-1]
+    anterior = candles[-2]
+    terceira = candles[-3]
+
+    # FILTRO LATERAL
+    if abs(ema_atual - ema_anterior) < 0.00005:
+        return None
+
+    # PRECISA ESTAR AFASTADO
+    afastado = (
+        terceira["close"] > ema_atual and anterior["close"] > ema_atual
+    ) or (
+        terceira["close"] < ema_atual and anterior["close"] < ema_atual
+    )
+
+    if not afastado:
+        return None
+
+    # TOQUE NA EMA
+    if not (anterior["min"] <= ema_atual <= anterior["max"]):
+        return None
+
+    # ANTI SPIKE
+    corpo = abs(ultima["close"] - ultima["open"])
+    tamanho_total = ultima["max"] - ultima["min"]
+
+    if tamanho_total > corpo * 2:
+        return None
+
+    # CALL
+    if ultima["close"] > anterior["max"] and ultima["close"] > ema_atual:
+        return "CALL"
+
+    # PUT
+    if ultima["close"] < anterior["min"] and ultima["close"] < ema_atual:
+        return "PUT"
+
+    return None
+
+# =========================
+# INICIAR
+# =========================
+while not conectar():
+    time.sleep(5)
+
+enviar_telegram("🤖 Bot iniciado\n📡 Monitorando OTC M1")
+ultimo_sinal = {}
+
+print("Bot rodando...")
+
+# =========================
+# LOOP PRINCIPAL
+# =========================
+while True:
+    try:
+
+        # VERIFICA CONEXÃO
+        if not iq.check_connect():
+            print("Conexão caiu. Reconectando...")
+            conectar()
+            time.sleep(3)
+            continue
+
+        for par in PARES:
+
+            try:
+
+                # TENTA PEGAR CANDLES 3 VEZES
+                candles = None
+                for _ in range(3):
+                    candles = iq.get_candles(par, TIMEFRAME, 30, time.time())
+                    if candles:
+                        break
+                    print("Tentando pegar candles novamente...")
+                    time.sleep(1)
+
+                if not candles:
+                    print(f"Falha ao pegar candles {par}")
+                    continue
+
+                horario = candles[-1]["from"]
+
+                if ultimo_sinal.get(par) == horario:
+                    continue
+
+                direcao = estrategia_ema9(candles)
+
+                if direcao:
+                    ultimo_sinal[par] = horario
+
+                    agora = datetime.now()
+                    entrada = (agora + timedelta(minutes=2)).strftime("%H:%M")
+                    enviado = agora.strftime("%H:%M")
+
+                    mensagem = (
+                        "🏆 SINAL VIP | IQ OPTION\n\n"
+                        f"💱 Ativo: {par}\n"
+                        "🕯 Timeframe: M1\n"
+                        "🌙 Mercado: OTC (Digital)\n\n"
+                        f"📊 Direção: {direcao}\n"
+                        f"⏰ Entrada: {entrada}\n"
+                        f"📡 Enviado: {enviado}\n\n"
+                        "🎯 Gerenciamento: Gale 1\n\n"
+                        "━━━━━━━━━━━━━━\n"
+                        "🤖 BOT VIP • Alta Precisão"
+                    )
+
+                    enviar_telegram(mensagem)
+                    print("Sinal enviado:", par, direcao)
+
+                    time.sleep(60)
+
+            except Exception as erro_par:
+                print(f"Erro no par {par}:", erro_par)
+
+                if not iq.check_connect():
+                    conectar()
+
+                time.sleep(3)
+
+        time.sleep(5)
+
+    except Exception as erro_geral:
+        print("Erro geral:", erro_geral)
+        conectar()
+        time.sleep(5)

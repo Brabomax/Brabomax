@@ -1,0 +1,214 @@
+
+Xvnc TigerVNC 1.16.0 - built Feb  2 2026 15:30:49
+Copyright (C) 1999-2026 TigerVNC team and many others (see README.rst)
+See https://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12101016
+
+Built without GBM support
+Failed to initialize DRI3 extension
+Sync Extension 3.1
+
+Sat Mar 21 21:34:10 2026
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5901
+ vncext:      Created VNC server for screen 0
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/misc/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/TTF/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/OTF/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/Type1/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/100dpi/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/75dpi/, removing from list!
+Popen: `"/data/data/com.termux/files/usr/bin/xkbcomp" -w 1 "-R/data/data/com.termux/files/usr/share/X11/xkb" -xkm "-" -em1 "The XKEYBOARD keymap compiler (xkbcomp) reports:" -emp "> " -eml "Errors from xkbcomp are not fatal to the X server" "/data/data/com.termux/files/usr/tmp/server-1.xkm"', fp = 0xb400007f38481578
+Pclose: fp = 0xb400007f38481578
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+>                   Using F23, ignoring XF86TouchpadOff
+> Warning:          Symbol map for key <FK23> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Symbol map for key <FK24> redefined
+>                   Using last definition for conflicting fields
+Errors from xkbcomp are not fatal to the X server
+Loaded XKB keymap /data/data/com.termux/files/usr/tmp/server-1.xkm, defined=0x7f
+client(0): Reserved pid(19141).
+client(0): Reserved cmdname(/data/data/com.termux/files/usr/bin/Xvnc) and cmdargs(:1 -auth /data/data/com.termux/files/home/.Xauthority -desktop localhost:1 () -geometry 1024x768 -rfbauth /data/data/com.termux/files/home/.vnc/passwd -rfbport 5901).
+[mi] mieq: warning: overriding existing handler 0x0 with 0x654f3a8de4 for event 2
+[mi] mieq: warning: overriding existing handler 0x0 with 0x654f3a8de4 for event 3
+client(200000): Reserved pid(19150).
+client(200000): Reserved cmdname(/data/data/com.termux/files/usr/bin/dbus-launch) and cmdargs(--sh-syntax --exit-with-session xfce4-session).
+AllocNewConnection: client index = 1, socket fd = 8, local = 1
+client(400000): Reserved pid(19153).
+client(400000): Reserved cmdname(/data/data/com.termux/files/usr/bin/dbus-launch) and cmdargs(--sh-syntax --exit-with-session xfce4-session).
+AllocNewConnection: client index = 2, socket fd = 9, local = 1
+client(600000): Reserved pid(19150).
+client(600000): Reserved cmdname(xfce4-session) and cmdargs(NULL).
+AllocNewConnection: client index = 3, socket fd = 10, local = 1
+
+(xfce4-session:19150): libxfce4util-WARNING **: 21:34:13.127: Failed to get a ConsoleKit proxy: Could not connect: No such file or directory
+** Message: 21:34:13.155: Failed to fetch _NET_NUMBER_OF_DESKTOPS; assuming 1
+** Message: 21:34:13.155: Failed to get _NET_WORKAREA; using full screen dimensions
+** Message: 21:34:13.155: Failed to fetch _NET_CURRENT_DESKTOP; assuming 0
+** Message: 21:34:13.156: Failed to fetch _NET_CURRENT_DESKTOP; assuming 0
+client(800000): Reserved pid(19176).
+client(800000): Reserved cmdname(xfwm4) and cmdargs(NULL).
+AllocNewConnection: client index = 4, socket fd = 12, local = 1
+client(a00000): Reserved pid(19188).
+client(a00000): Reserved cmdname(xfsettingsd) and cmdargs(NULL).
+AllocNewConnection: client index = 5, socket fd = 14, local = 1
+client(c00000): Reserved pid(19188).
+client(c00000): Reserved cmdname(xfsettingsd) and cmdargs(NULL).
+AllocNewConnection: client index = 6, socket fd = 16, local = 1
+client(c00000): Released pid(19188).
+client(c00000): Released cmdline(xfsettingsd) and cmdargs(NULL).
+client(c00000): Reserved pid(19188).
+client(c00000): Reserved cmdname(xfsettingsd) and cmdargs(NULL).
+AllocNewConnection: client index = 6, socket fd = 16, local = 1
+client(e00000): Reserved pid(19199).
+client(e00000): Reserved cmdname(xfce4-panel) and cmdargs(NULL).
+AllocNewConnection: client index = 7, socket fd = 17, local = 1
+client(c00000): Released pid(19188).
+client(c00000): Released cmdline(xfsettingsd) and cmdargs(NULL).
+client(c00000): Reserved pid(19199).
+client(c00000): Reserved cmdname(xfce4-panel) and cmdargs(NULL).
+AllocNewConnection: client index = 6, socket fd = 16, local = 1
+client(c00000): Released pid(19199).
+client(c00000): Released cmdline(xfce4-panel) and cmdargs(NULL).
+client(c00000): Reserved pid(19205).
+client(c00000): Reserved cmdname(Thunar) and cmdargs(--daemon).
+AllocNewConnection: client index = 6, socket fd = 16, local = 1
+client(1000000): Reserved pid(19213).
+client(1000000): Reserved cmdname(xfdesktop) and cmdargs(NULL).
+AllocNewConnection: client index = 8, socket fd = 18, local = 1
+client(1200000): Reserved pid(19213).
+client(1200000): Reserved cmdname(xfdesktop) and cmdargs(NULL).
+AllocNewConnection: client index = 9, socket fd = 15, local = 1
+client(1400000): Reserved pid(19221).
+client(1400000): Reserved cmdname(xfsettingsd) and cmdargs(NULL).
+AllocNewConnection: client index = 10, socket fd = 19, local = 1
+client(1600000): Reserved pid(19220).
+client(1600000): Reserved cmdname(xfce4-power-manager) and cmdargs(NULL).
+AllocNewConnection: client index = 11, socket fd = 23, local = 1
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+(xfce4-power-manager:19220): xfce4-power-manager-WARNING **: 21:34:15.162: Display is not DPMS capable
+
+(xfce4-power-manager:19220): GLib-GIO-CRITICAL **: 21:34:15.164: g_dbus_connection_signal_subscribe: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+client(1400000): Released pid(19221).
+client(1400000): Released cmdline(xfsettingsd) and cmdargs(NULL).
+client(1400000): Reserved pid(19222).
+client(1400000): Reserved cmdname(/data/data/com.termux/files/usr/lib/xfce4/notifyd/xfce4-notifyd) and cmdargs(NULL).
+AllocNewConnection: client index = 10, socket fd = 19, local = 1
+client(1800000): Reserved pid(19237).
+client(1800000): Reserved cmdname(/data/data/com.termux/files/usr/lib/xfce4/notifyd/xfce4-notifyd) and cmdargs(NULL).
+AllocNewConnection: client index = 12, socket fd = 24, local = 1
+client(1a00000): Reserved pid(19249).
+client(1a00000): Reserved cmdname(/data/data/com.termux/files/usr/lib/xfce4/panel/wrapper-2.0) and cmdargs(/data/data/com.termux/files/usr/lib/xfce4/panel/plugins/libsystray.so 6 14680076 systray Status Tray Plugin Provides status notifier items (application indicators) and legacy systray items).
+AllocNewConnection: client index = 13, socket fd = 25, local = 1
+client(1800000): Released pid(19237).
+client(1800000): Released cmdline(/data/data/com.termux/files/usr/lib/xfce4/notifyd/xfce4-notifyd) and cmdargs(NULL).
+client(1800000): Reserved pid(19296).
+client(1800000): Reserved cmdname(/data/data/com.termux/files/usr/lib/xfce4/panel/wrapper-2.0) and cmdargs(/data/data/com.termux/files/usr/lib/xfce4/panel/plugins/libactions.so 10 14680077 actions Action Buttons Log out, lock or other system actions).
+AllocNewConnection: client index = 12, socket fd = 24, local = 1
+client(1200000): Released pid(19213).
+client(1200000): Released cmdline(xfdesktop) and cmdargs(NULL).
+Xlib:  extension "DPMS" missing on display ":1".
+
+** (xfdesktop:19213): WARNING **: 21:34:15.831: Failed to get system bus: Could not connect: No such file or directory
+
+(xfce4-power-manager:19220): libupower-glib-WARNING **: 21:34:40.362: Couldn't connect to proxy: Error calling StartServiceByName for org.freedesktop.UPower: Timeout was reached
+
+(xfce4-power-manager:19220): libxfce4util-WARNING **: 21:34:40.388: Failed to get a ConsoleKit proxy: Could not connect: No such file or directory
+
+** (xfce4-power-manager:19220): WARNING **: 21:34:40.393: Unable to get the interface, net.hadess.PowerProfiles : Could not connect: No such file or directory
+
+Sat Mar 21 21:34:56 2026
+ Connections: Accepted: 127.0.0.1::37180
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Sat Mar 21 21:35:03 2026
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 6 (8bpp) rgb222
+
+(xfce4-power-manager:19220): xfce4-power-manager-WARNING **: 21:35:05.417: Unable to get the interface, org.freedesktop.UPower.KbdBacklight
+
+(xfce4-power-manager:19220): xfce4-power-manager-WARNING **: 21:35:05.418: Unable to connect to session manager : Failed to connect to the session manager: Could not open network socket
+client(1200000): Reserved pid(20333).
+client(1200000): Reserved cmdname(exo-open) and cmdargs(--launch TerminalEmulator).
+AllocNewConnection: client index = 9, socket fd = 27, local = 1
+client(1200000): Released pid(20333).
+client(1200000): Released cmdline(exo-open) and cmdargs(--launch TerminalEmulator).
+client(1200000): Reserved pid(20336).
+client(1200000): Reserved cmdname(/data/data/com.termux/files/usr/bin/xfce4-mime-helper) and cmdargs(--launch TerminalEmulator).
+AllocNewConnection: client index = 9, socket fd = 27, local = 1
+client(1c00000): Reserved pid(20338).
+client(1c00000): Reserved cmdname(/data/data/com.termux/files/usr/bin/xfce4-terminal) and cmdargs(NULL).
+AllocNewConnection: client index = 14, socket fd = 28, local = 1
+
+(xfce4-terminal:20338): xfce4-terminal-WARNING **: 21:35:06.973: Failed to initialize Xfconf: Could not connect: No such file or directory
+
+(xfce4-terminal:20338): xfce4-terminal-WARNING **: 21:35:07.011: Failed to connect to session manager: Failed to connect to the session manager: Could not open network socket
+client(1200000): Released pid(20336).
+client(1200000): Released cmdline(/data/data/com.termux/files/usr/bin/xfce4-mime-helper) and cmdargs(--launch TerminalEmulator).
+client(1200000): Reserved pid(20383).
+client(1200000): Reserved cmdname(python) and cmdargs(bot.py).
+AllocNewConnection: client index = 9, socket fd = 20, local = 1
+
+Sat Mar 21 21:36:33 2026
+ VNCSConnST:  Closing 127.0.0.1::37180: Clean disconnection
+ EncodeManager: Framebuffer updates: 253
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 11 rects, 1.214 kpixels
+ EncodeManager:            187 B (1:7.19786 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 46 rects, 98.676 kpixels
+ EncodeManager:                 1.60254 KiB (1:60.468 ratio)
+ EncodeManager:     Indexed RLE: 343 rects, 2.65268 Mpixels
+ EncodeManager:                  52.0449 KiB (1:49.8518 ratio)
+ EncodeManager:     Full Colour: 2 rects, 64 pixels
+ EncodeManager:                  86 B (1:1.02326 ratio)
+ EncodeManager:   Total: 402 rects, 2.75264 Mpixels
+ EncodeManager:          53.9141 KiB (1:49.9468 ratio)
+ Connections: Closed: 127.0.0.1::37180
+
+Sat Mar 21 21:37:45 2026
+ Connections: Accepted: 127.0.0.1::40468
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Sat Mar 21 21:37:54 2026
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 6 (8bpp) rgb222
+
+Sat Mar 21 21:38:20 2026
+ VNCSConnST:  Closing 127.0.0.1::40468: Clean disconnection
+ EncodeManager: Framebuffer updates: 24
+ EncodeManager:   ZRLE:
+ EncodeManager:     Indexed RLE: 26 rects, 806.558 kpixels
+ EncodeManager:                  13.7744 KiB (1:57.2045 ratio)
+ EncodeManager:   Total: 26 rects, 806.558 kpixels
+ EncodeManager:          13.7744 KiB (1:57.2045 ratio)
+ Connections: Closed: 127.0.0.1::40468
+
+Sat Mar 21 21:57:51 2026
+ Connections: Accepted: 127.0.0.1::36184
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Sat Mar 21 21:57:58 2026
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 6 (8bpp) rgb222
+
+Sat Mar 21 21:58:25 2026
+ VNCSConnST:  Closing 127.0.0.1::36184: Clean disconnection
+ EncodeManager: Framebuffer updates: 59
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 4 rects, 520 pixels
+ EncodeManager:            68 B (1:8.35294 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 2 rects, 128 pixels
+ EncodeManager:                 53 B (1:2.86792 ratio)
+ EncodeManager:     Indexed RLE: 60 rects, 880.993 kpixels
+ EncodeManager:                  16.959 KiB (1:50.7724 ratio)
+ EncodeManager:   Total: 66 rects, 881.641 kpixels
+ EncodeManager:          17.0771 KiB (1:50.4622 ratio)
+ Connections: Closed: 127.0.0.1::36184

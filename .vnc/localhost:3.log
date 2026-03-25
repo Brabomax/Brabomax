@@ -1,0 +1,179 @@
+
+Xvnc TigerVNC 1.16.0 - built Feb  2 2026 15:30:49
+Copyright (C) 1999-2026 TigerVNC team and many others (see README.rst)
+See https://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12101016
+
+Built without GBM support
+Failed to initialize DRI3 extension
+Sync Extension 3.1
+
+Sat Mar 21 09:32:23 2026
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5903
+ vncext:      Created VNC server for screen 0
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/misc/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/TTF/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/OTF/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/Type1/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/100dpi/, removing from list!
+[dix] Could not init font path element /data/data/com.termux/files/usr/share/fonts/75dpi/, removing from list!
+Popen: `"/data/data/com.termux/files/usr/bin/xkbcomp" -w 1 "-R/data/data/com.termux/files/usr/share/X11/xkb" -xkm "-" -em1 "The XKEYBOARD keymap compiler (xkbcomp) reports:" -emp "> " -eml "Errors from xkbcomp are not fatal to the X server" "/data/data/com.termux/files/usr/tmp/server-3.xkm"', fp = 0xb400007ce963ed18
+Pclose: fp = 0xb400007ce963ed18
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+>                   Using F23, ignoring XF86TouchpadOff
+> Warning:          Symbol map for key <FK23> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Symbol map for key <FK24> redefined
+>                   Using last definition for conflicting fields
+Errors from xkbcomp are not fatal to the X server
+Loaded XKB keymap /data/data/com.termux/files/usr/tmp/server-3.xkm, defined=0x7f
+client(0): Reserved pid(21836).
+client(0): Reserved cmdname(/data/data/com.termux/files/usr/bin/Xvnc) and cmdargs(:3 -auth /data/data/com.termux/files/home/.Xauthority -desktop localhost:3 () -geometry 1024x768 -rfbauth /data/data/com.termux/files/home/.vnc/passwd -rfbport 5903).
+[mi] mieq: warning: overriding existing handler 0x0 with 0x5ee0b44de4 for event 2
+[mi] mieq: warning: overriding existing handler 0x0 with 0x5ee0b44de4 for event 3
+client(200000): Reserved pid(21864).
+client(200000): Reserved cmdname(/data/data/com.termux/files/usr/bin/dbus-launch) and cmdargs(--sh-syntax --exit-with-session xfce4-session).
+AllocNewConnection: client index = 1, socket fd = 8, local = 1
+client(400000): Reserved pid(21870).
+client(400000): Reserved cmdname(/data/data/com.termux/files/usr/bin/dbus-launch) and cmdargs(--sh-syntax --exit-with-session xfce4-session).
+AllocNewConnection: client index = 2, socket fd = 9, local = 1
+client(600000): Reserved pid(21864).
+client(600000): Reserved cmdname(xfce4-session) and cmdargs(NULL).
+AllocNewConnection: client index = 3, socket fd = 10, local = 1
+
+(xfce4-session:21864): libxfce4util-WARNING **: 09:32:26.455: Failed to get a ConsoleKit proxy: Could not connect: No such file or directory
+** Message: 09:32:26.474: Failed to fetch _NET_NUMBER_OF_DESKTOPS; assuming 1
+** Message: 09:32:26.474: Failed to get _NET_WORKAREA; using full screen dimensions
+** Message: 09:32:26.474: Failed to fetch _NET_CURRENT_DESKTOP; assuming 0
+** Message: 09:32:26.475: Failed to fetch _NET_CURRENT_DESKTOP; assuming 0
+client(800000): Reserved pid(21895).
+client(800000): Reserved cmdname(xfwm4) and cmdargs(NULL).
+AllocNewConnection: client index = 4, socket fd = 12, local = 1
+** Message: 09:32:27.039: Failed to fetch _NET_CURRENT_DESKTOP; assuming 0
+client(a00000): Reserved pid(21908).
+client(a00000): Reserved cmdname(xfsettingsd) and cmdargs(NULL).
+AllocNewConnection: client index = 5, socket fd = 14, local = 1
+client(c00000): Reserved pid(21908).
+client(c00000): Reserved cmdname(xfsettingsd) and cmdargs(NULL).
+AllocNewConnection: client index = 6, socket fd = 16, local = 1
+client(c00000): Released pid(21908).
+client(c00000): Released cmdline(xfsettingsd) and cmdargs(NULL).
+client(c00000): Reserved pid(21908).
+client(c00000): Reserved cmdname(xfsettingsd) and cmdargs(NULL).
+AllocNewConnection: client index = 6, socket fd = 16, local = 1
+client(c00000): Released pid(21908).
+client(c00000): Released cmdline(xfsettingsd) and cmdargs(NULL).
+client(c00000): Reserved pid(21921).
+client(c00000): Reserved cmdname(xfce4-panel) and cmdargs(NULL).
+AllocNewConnection: client index = 6, socket fd = 16, local = 1
+client(e00000): Reserved pid(21921).
+client(e00000): Reserved cmdname(xfce4-panel) and cmdargs(NULL).
+AllocNewConnection: client index = 7, socket fd = 17, local = 1
+client(e00000): Released pid(21921).
+client(e00000): Released cmdline(xfce4-panel) and cmdargs(NULL).
+client(e00000): Reserved pid(21936).
+client(e00000): Reserved cmdname(Thunar) and cmdargs(--daemon).
+AllocNewConnection: client index = 7, socket fd = 17, local = 1
+client(1000000): Reserved pid(21958).
+client(1000000): Reserved cmdname(xfdesktop) and cmdargs(NULL).
+AllocNewConnection: client index = 8, socket fd = 18, local = 1
+client(1200000): Reserved pid(21958).
+client(1200000): Reserved cmdname(xfdesktop) and cmdargs(NULL).
+AllocNewConnection: client index = 9, socket fd = 15, local = 1
+client(1400000): Reserved pid(21983).
+client(1400000): Reserved cmdname(xfsettingsd) and cmdargs(NULL).
+AllocNewConnection: client index = 10, socket fd = 20, local = 1
+client(1600000): Reserved pid(21982).
+client(1600000): Reserved cmdname(xfce4-power-manager) and cmdargs(NULL).
+AllocNewConnection: client index = 11, socket fd = 19, local = 1
+client(1400000): Released pid(21983).
+client(1400000): Released cmdline(xfsettingsd) and cmdargs(NULL).
+client(1400000): Reserved pid(21984).
+client(1400000): Reserved cmdname(/data/data/com.termux/files/usr/lib/xfce4/notifyd/xfce4-notifyd) and cmdargs(NULL).
+AllocNewConnection: client index = 10, socket fd = 20, local = 1
+Xlib:  extension "DPMS" missing on display ":3.0".
+
+(xfce4-power-manager:21982): xfce4-power-manager-WARNING **: 09:32:28.043: Display is not DPMS capable
+
+(xfce4-power-manager:21982): GLib-GIO-CRITICAL **: 09:32:28.044: g_dbus_connection_signal_subscribe: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+client(1800000): Reserved pid(22000).
+client(1800000): Reserved cmdname(/data/data/com.termux/files/usr/lib/xfce4/panel/wrapper-2.0) and cmdargs(/data/data/com.termux/files/usr/lib/xfce4/panel/plugins/libsystray.so 6 12582924 systray Status Tray Plugin Provides status notifier items (application indicators) and legacy systray items).
+AllocNewConnection: client index = 12, socket fd = 24, local = 1
+client(1a00000): Reserved pid(22002).
+client(1a00000): Reserved cmdname(/data/data/com.termux/files/usr/lib/xfce4/notifyd/xfce4-notifyd) and cmdargs(NULL).
+AllocNewConnection: client index = 13, socket fd = 25, local = 1
+client(1a00000): Released pid(22002).
+client(1a00000): Released cmdline(/data/data/com.termux/files/usr/lib/xfce4/notifyd/xfce4-notifyd) and cmdargs(NULL).
+client(1a00000): Reserved pid(22048).
+client(1a00000): Reserved cmdname(/data/data/com.termux/files/usr/lib/xfce4/panel/wrapper-2.0) and cmdargs(/data/data/com.termux/files/usr/lib/xfce4/panel/plugins/libactions.so 10 12582925 actions Action Buttons Log out, lock or other system actions).
+AllocNewConnection: client index = 13, socket fd = 25, local = 1
+client(1200000): Released pid(21958).
+client(1200000): Released cmdline(xfdesktop) and cmdargs(NULL).
+Xlib:  extension "DPMS" missing on display ":3".
+
+** (xfdesktop:21958): WARNING **: 09:32:28.796: Failed to get system bus: Could not connect: No such file or directory
+
+(xfce4-power-manager:21982): libupower-glib-WARNING **: 09:32:53.282: Couldn't connect to proxy: Error calling StartServiceByName for org.freedesktop.UPower: Timeout was reached
+
+(xfce4-power-manager:21982): libxfce4util-WARNING **: 09:32:53.301: Failed to get a ConsoleKit proxy: Could not connect: No such file or directory
+
+** (xfce4-power-manager:21982): WARNING **: 09:32:53.307: Unable to get the interface, net.hadess.PowerProfiles : Could not connect: No such file or directory
+
+(xfce4-power-manager:21982): xfce4-power-manager-WARNING **: 09:33:18.335: Unable to get the interface, org.freedesktop.UPower.KbdBacklight
+client(200000): Released pid(21864).
+client(200000): Released cmdline(/data/data/com.termux/files/usr/bin/dbus-launch) and cmdargs(--sh-syntax --exit-with-session xfce4-session).
+client(400000): Released pid(21870).
+client(400000): Released cmdline(/data/data/com.termux/files/usr/bin/dbus-launch) and cmdargs(--sh-syntax --exit-with-session xfce4-session).
+client(600000): Released pid(21864).
+client(600000): Released cmdline(xfce4-session) and cmdargs(NULL).
+xfsettingsd: Another instance took over. Leaving...
+
+(Thunar:21936): thunar-WARNING **: 09:37:00.290: Name 'org.xfce.FileManager' lost on the message dbus.
+
+(Thunar:21936): thunar-WARNING **: 09:37:00.291: Name 'org.freedesktop.FileManager1' lost on the message dbus.
+
+(xfce4-power-manager:21982): libxfce4ui-WARNING **: 09:37:00.292: ICE I/O Error
+
+(xfce4-power-manager:21982): libxfce4ui-WARNING **: 09:37:00.292: Disconnected from session manager.
+Another notification daemon is running, exiting
+Another notification daemon is running, exiting
+
+** (xfce4-power-manager:21982): WARNING **: 09:37:00.295: Error: The connection is closed
+
+** (xfce4-power-manager:21982): WARNING **: 09:37:00.295: Error: The connection is closed
+
+(xfce4-panel:21921): libxfce4ui-WARNING **: 09:37:00.295: ICE I/O Error
+
+(xfce4-panel:21921): libxfce4ui-WARNING **: 09:37:00.296: Disconnected from session manager.
+
+(xfce4-panel:21921): xfce4-panel-CRITICAL **: 09:37:00.297: Name org.xfce.Panel lost on the message dbus, exiting.
+
+** (xfdesktop:21958): WARNING **: 09:37:00.299: Failed to get system bus: Could not connect: No such file or directory
+client(800000): Released pid(21895).
+client(800000): Released cmdline(xfwm4) and cmdargs(NULL).
+client(a00000): Released pid(21908).
+client(a00000): Released cmdline(xfsettingsd) and cmdargs(NULL).
+client(c00000): Released pid(21921).
+client(c00000): Released cmdline(xfce4-panel) and cmdargs(NULL).
+client(e00000): Released pid(21936).
+client(e00000): Released cmdline(Thunar) and cmdargs(--daemon).
+client(1000000): Released pid(21958).
+client(1000000): Released cmdline(xfdesktop) and cmdargs(NULL).
+client(1400000): Released pid(21984).
+client(1400000): Released cmdline(/data/data/com.termux/files/usr/lib/xfce4/notifyd/xfce4-notifyd) and cmdargs(NULL).
+client(1600000): Released pid(21982).
+client(1600000): Released cmdline(xfce4-power-manager) and cmdargs(NULL).
+client(1800000): Released pid(22000).
+client(1800000): Released cmdline(/data/data/com.termux/files/usr/lib/xfce4/panel/wrapper-2.0) and cmdargs(/data/data/com.termux/files/usr/lib/xfce4/panel/plugins/libsystray.so 6 12582924 systray Status Tray Plugin Provides status notifier items (application indicators) and legacy systray items).
+client(1a00000): Released pid(22048).
+client(1a00000): Released cmdline(/data/data/com.termux/files/usr/lib/xfce4/panel/wrapper-2.0) and cmdargs(/data/data/com.termux/files/usr/lib/xfce4/panel/plugins/libactions.so 10 12582925 actions Action Buttons Log out, lock or other system actions).
+(dix) removing device 2
+(dix) removing device 3
+(dix) removing device 5
+(dix) removing device 4
+(dix) removing device 7
+(dix) removing device 6
+client(0): Released pid(21836).
+client(0): Released cmdline(/data/data/com.termux/files/usr/bin/Xvnc) and cmdargs(:3 -auth /data/data/com.termux/files/home/.Xauthority -desktop localhost:3 () -geometry 1024x768 -rfbauth /data/data/com.termux/files/home/.vnc/passwd -rfbport 5903).
